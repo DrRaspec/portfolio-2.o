@@ -89,30 +89,34 @@ export function ContactSection() {
               <h3 className="text-lg font-semibold text-foreground">Connect with me</h3>
               <div className="flex gap-4">
                 <a
-                  href="#"
+                  href="https://github.com/DrRaspec"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-12 h-12 rounded-xl bg-card border border-border flex items-center justify-center hover:border-primary hover:text-primary transition-all hover:-translate-y-1"
                   aria-label="GitHub"
                 >
                   <Github className="w-5 h-5" />
                 </a>
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/in/yong-bunleng-ybl369"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-12 h-12 rounded-xl bg-card border border-border flex items-center justify-center hover:border-primary hover:text-primary transition-all hover:-translate-y-1"
                   aria-label="LinkedIn"
                 >
                   <Linkedin className="w-5 h-5" />
                 </a>
                 <a
-                  href="mailto:hello@drraspec.com"
+                  href="mailto:yong.bunleng.cs@gmail.com"
                   className="w-12 h-12 rounded-xl bg-card border border-border flex items-center justify-center hover:border-primary hover:text-primary transition-all hover:-translate-y-1"
                   aria-label="Email"
                 >
                   <Mail className="w-5 h-5" />
                 </a>
                 <a
-                  href="#"
+                  href="tel:+85561214642"
                   className="w-12 h-12 rounded-xl bg-card border border-border flex items-center justify-center hover:border-primary hover:text-primary transition-all hover:-translate-y-1"
-                  aria-label="Play Store"
+                  aria-label="Phone"
                 >
                   <Smartphone className="w-5 h-5" />
                 </a>
@@ -120,7 +124,7 @@ export function ContactSection() {
             </div>
 
             <div className="text-center md:text-left">
-              <p className="text-muted-foreground">Based in the digital world, available worldwide.</p>
+              <p className="text-muted-foreground">Based in Phnom Penh, Cambodia. Available worldwide.</p>
             </div>
           </div>
         </div>
