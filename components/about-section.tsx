@@ -33,41 +33,55 @@ export function AboutSection() {
             {/* Avatar Placeholder */}
             <div className="flex justify-center animate-fade-in-up">
               <div className="w-64 h-64 sm:w-80 sm:h-80 rounded-3xl bg-card border border-border shadow-xl dark:shadow-primary/10 overflow-hidden">
-                <img src="/images/profile.png" alt="Dr Raspec" className="w-full h-full object-cover" />
+                <img src="/images/profile.png" alt="Yong Bunleng" className="w-full h-full object-cover" />
               </div>
             </div>
 
-            {/* About Content */}
             <div className="space-y-6 animate-fade-in-up" style={{ animationDelay: "150ms" }}>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  With over 5 years of experience in software development, I specialize in building cross-platform
-                  mobile applications using <span className="text-primary font-medium">Flutter</span> and robust backend
-                  systems with <span className="text-primary font-medium">Spring Boot</span> and{" "}
-                  <span className="text-primary font-medium">Laravel</span>.
+                  I am a software developer with <span className="text-primary font-medium">2+ years</span> of hands-on
+                  experience building mobile apps, web apps, and backend systems. I work across multiple technologies
+                  and platforms.
                 </p>
                 <p>My expertise includes:</p>
                 <ul className="space-y-2 list-none">
                   <li className="flex items-start gap-2">
                     <span className="text-primary mt-1">✓</span>
-                    Flutter & cross-platform app development
+                    <span>
+                      <span className="font-medium text-foreground">Mobile Development:</span> Flutter, Swift, Kotlin
+                    </span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-primary mt-1">✓</span>
-                    API integrations (maps, payments, authentication)
+                    <span>
+                      <span className="font-medium text-foreground">Web Development:</span> Next.js, React.js, Angular
+                    </span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-primary mt-1">✓</span>
-                    Focus on security, performance, and scalability
+                    <span>
+                      <span className="font-medium text-foreground">Backend Development:</span> Spring Boot, Python
+                    </span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-primary mt-1">✓</span>
-                    Strong knowledge of REST, microservices, and clean code
+                    <span>
+                      <span className="font-medium text-foreground">Desktop Development:</span> C++, C# (WPF), Java
+                      (JavaFX)
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">✓</span>
+                    <span>
+                      <span className="font-medium text-foreground">Game Development:</span> Godot Engine
+                    </span>
                   </li>
                 </ul>
                 <p>
-                  I'm passionate about creating elegant solutions that solve real-world problems while maintaining
-                  clean, maintainable code.
+                  I build mobile apps, full-stack systems, desktop software, and small indie games. I focus on clean
+                  architecture, maintainable code, and delivering smooth user experiences that solve real-world
+                  problems.
                 </p>
               </div>
             </div>

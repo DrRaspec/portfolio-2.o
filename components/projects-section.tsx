@@ -1,39 +1,68 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
-import { Smartphone, Server, ExternalLink } from "lucide-react"
+import { Smartphone, Globe, ExternalLink, Monitor, Gamepad2 } from "lucide-react"
 
 const mobileProjects = [
   {
-    title: "RideMate – Transport Companion App",
-    description: "Companion app for ride booking and tracking with live map + chat.",
-    badges: ["Flutter", "Firebase", "Google Maps API"],
-    role: "Lead Mobile Developer",
-    features: ["Live tracking", "Chat", "Push notifications"],
+    title: "DIGI Express",
+    description:
+      "A mobile application that helps users purchase products from China with seamless ordering and tracking.",
+    badges: ["Flutter", "REST API", "E-commerce"],
+    role: "Mobile Developer",
+    features: ["Product browsing", "Order management", "Payment integration"],
   },
   {
-    title: "FoodDash – Delivery App",
-    description: "Modern food delivery application with real-time order tracking.",
-    badges: ["Flutter", "REST API", "Stripe"],
+    title: "Kork App",
+    description: "A school project application designed for booking tickets with an intuitive user interface.",
+    badges: ["Flutter", "Firebase", "Booking System"],
     role: "Mobile Developer",
-    features: ["Order tracking", "Payments", "User profiles"],
+    features: ["Ticket booking", "User authentication", "Real-time updates"],
   },
 ]
 
-const backendProjects = [
+const webProjects = [
   {
-    title: "OrderFlow – Scalable Order API",
-    description: "Order management API handling thousands of daily transactions.",
-    badges: ["Spring Boot", "MySQL", "Redis", "Docker"],
-    role: "Back-end Engineer",
-    features: ["Authentication", "Order lifecycle", "Reporting APIs"],
+    title: "Phone Shop Management System",
+    description: "A comprehensive web application for managing phone shop inventory, sales, and customer data.",
+    badges: ["Angular", "Spring Boot", "Full-Stack"],
+    role: "Full-Stack Developer",
+    features: ["Inventory management", "Sales tracking", "Customer management"],
   },
   {
-    title: "AuthCore – Authentication Service",
-    description: "Secure authentication and session management service.",
-    badges: ["Laravel", "JWT", "Redis"],
-    role: "Back-end Developer",
-    features: ["Secure auth", "Session handling", "Token refresh"],
+    title: "Student Management System",
+    description:
+      "A complete full-stack system for handling student and school operations with modern web technologies.",
+    badges: ["Spring Boot", "MySQL", "Full-Stack"],
+    role: "Full-Stack Developer",
+    features: ["Student CRUD operations", "Course management", "Grade tracking"],
+  },
+]
+
+const desktopProjects = [
+  {
+    title: "BLT QR Generator",
+    description: "A desktop application for generating QR codes with customizable options and export features.",
+    badges: ["C#", "WPF", "Desktop App"],
+    role: "Desktop Developer",
+    features: ["QR code generation", "Customization options", "Export functionality"],
+  },
+  {
+    title: "Coffee Shop POS",
+    description: "A point-of-sale desktop application for managing coffee shop orders and transactions.",
+    badges: ["Java", "JavaFX", "Desktop App"],
+    role: "Desktop Developer",
+    features: ["Order management", "Transaction processing", "Inventory tracking"],
+  },
+]
+
+const gameProjects = [
+  {
+    title: "Pixel Adventure Game",
+    description: "A 2D platformer game with pixel art graphics, multiple levels, and engaging gameplay mechanics.",
+    badges: ["Godot Engine", "GDScript", "2D Platformer"],
+    role: "Game Developer",
+    features: ["Multiple levels", "Character animations", "Platform mechanics"],
   },
 ]
 
@@ -113,15 +142,47 @@ export function ProjectsSection() {
               </div>
             </div>
 
-            {/* Backend Systems */}
+            {/* Web Applications */}
             <div>
               <h3 className="text-xl font-semibold mb-6 flex items-center gap-2 text-foreground">
-                <Server className="w-6 h-6 text-primary" />
-                Back-end Systems
+                <Globe className="w-6 h-6 text-primary" />
+                Web Applications
               </h3>
               <div className="grid md:grid-cols-2 gap-6">
-                {backendProjects.map((project, index) => (
-                  <ProjectCard key={project.title} project={project} index={index + 2} />
+                {webProjects.map((project, index) => (
+                  <ProjectCard key={project.title} project={project} index={index + mobileProjects.length} />
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold mb-6 flex items-center gap-2 text-foreground">
+                <Monitor className="w-6 h-6 text-primary" />
+                Desktop Applications
+              </h3>
+              <div className="grid md:grid-cols-2 gap-6">
+                {desktopProjects.map((project, index) => (
+                  <ProjectCard
+                    key={project.title}
+                    project={project}
+                    index={index + mobileProjects.length + webProjects.length}
+                  />
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold mb-6 flex items-center gap-2 text-foreground">
+                <Gamepad2 className="w-6 h-6 text-primary" />
+                Games
+              </h3>
+              <div className="grid md:grid-cols-2 gap-6">
+                {gameProjects.map((project, index) => (
+                  <ProjectCard
+                    key={project.title}
+                    project={project}
+                    index={index + mobileProjects.length + webProjects.length + desktopProjects.length}
+                  />
                 ))}
               </div>
             </div>

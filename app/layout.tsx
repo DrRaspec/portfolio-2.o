@@ -8,15 +8,15 @@ import { ThemeProvider } from "@/components/theme-provider"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Dr Raspec – Mobile App & Back-end Developer",
+  title: "Yong Bunleng – Full-Stack Software Developer",
   description:
-    "Portfolio of Dr Raspec – Mobile App & Back-end Developer specializing in Flutter, Spring Boot, Laravel, and scalable API systems.",
-  authors: [{ name: "Dr Raspec" }],
+    "Portfolio of Yong Bunleng – Full-Stack Software Developer specializing in Flutter, Swift, Kotlin, Next.js, React, Angular, Spring Boot, and Python.",
+  authors: [{ name: "Yong Bunleng" }],
   openGraph: {
-    title: "Dr Raspec – Mobile App & Back-end Developer",
-    description: "Showcasing mobile apps, backend services, and development workflow of Dr Raspec.",
+    title: "Yong Bunleng – Full-Stack Software Developer",
+    description: "Showcasing mobile apps, web apps, backend services, and development workflow of Yong Bunleng.",
   },
-    generator: 'v0.app'
+  generator: "v0.app",
 }
 
 export default function RootLayout({

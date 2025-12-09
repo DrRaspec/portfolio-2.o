@@ -3,7 +3,13 @@
 import { useEffect, useState } from "react"
 import { ArrowDown, Mail } from "lucide-react"
 
-const rotatingTexts = ["Building Flutter apps", "Designing scalable APIs", "Optimizing cloud back-ends"]
+const rotatingTexts = [
+  "Building Flutter apps",
+  "Developing with Next.js & React",
+  "Designing scalable APIs with Spring Boot",
+  "Creating desktop apps with C# & Java",
+  "Making indie games with Godot",
+]
 
 export function HeroSection() {
   const [currentTextIndex, setCurrentTextIndex] = useState(0)
@@ -50,8 +56,8 @@ export function HeroSection() {
         <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[calc(100vh-8rem)]">
           {/* Left Column */}
           <div className="space-y-6 animate-fade-in-up">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground text-balance">Dr Raspec</h1>
-            <h2 className="text-xl sm:text-2xl text-primary font-medium">Mobile App & Back-end Developer</h2>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground text-balance">Yong Bunleng</h1>
+            <h2 className="text-xl sm:text-2xl text-primary font-medium">Full-Stack Software Developer</h2>
 
             {/* Typewriter Text */}
             <div className="h-8 flex items-center">
@@ -59,9 +65,11 @@ export function HeroSection() {
             </div>
 
             <div className="space-y-2 text-muted-foreground">
-              <p>✓ Building cross-platform Flutter apps</p>
-              <p>✓ Designing scalable REST APIs & backend systems</p>
-              <p>✓ Focus on performance and clean architecture</p>
+              <p>✓ Building cross-platform mobile apps with Flutter, Swift & Kotlin</p>
+              <p>✓ Developing modern web apps with Next.js, React & Angular</p>
+              <p>✓ Designing robust backend systems with Spring Boot & Python</p>
+              <p>✓ Creating desktop apps with C# & Java</p>
+              <p>✓ Making indie games with Godot</p>
             </div>
 
             {/* Buttons */}
@@ -92,7 +100,7 @@ export function HeroSection() {
                 <div className="w-64 h-80 sm:w-80 sm:h-96 rounded-3xl bg-card shadow-2xl dark:shadow-primary/20 border border-border overflow-hidden">
                   <img
                     src="/images/profile.png"
-                    alt="Dr Raspec - Mobile App & Back-end Developer"
+                    alt="Yong Bunleng - Full-Stack Software Developer"
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -103,19 +111,18 @@ export function HeroSection() {
               </div>
             </div>
 
-            {/* Stats */}
             <div className="grid grid-cols-3 gap-4 sm:gap-8 text-center">
               <div className="space-y-1">
-                <div className="text-2xl sm:text-3xl font-bold text-primary">5+</div>
+                <div className="text-2xl sm:text-3xl font-bold text-primary">2+</div>
                 <div className="text-xs sm:text-sm text-muted-foreground">Years Experience</div>
               </div>
               <div className="space-y-1">
-                <div className="text-2xl sm:text-3xl font-bold text-primary">20+</div>
-                <div className="text-xs sm:text-sm text-muted-foreground">Apps Deployed</div>
+                <div className="text-2xl sm:text-3xl font-bold text-primary">10+</div>
+                <div className="text-xs sm:text-sm text-muted-foreground">Projects Built</div>
               </div>
               <div className="space-y-1">
-                <div className="text-2xl sm:text-3xl font-bold text-primary">99.9%</div>
-                <div className="text-xs sm:text-sm text-muted-foreground">API Uptime</div>
+                <div className="text-2xl sm:text-3xl font-bold text-primary">7+</div>
+                <div className="text-xs sm:text-sm text-muted-foreground">Technologies</div>
               </div>
             </div>
           </div>

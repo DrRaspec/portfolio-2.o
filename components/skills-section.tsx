@@ -3,26 +3,34 @@
 import type React from "react"
 
 import { useEffect, useRef, useState } from "react"
-import { Smartphone, Server, Database, Cloud, Code2, Palette, Shield, Container, GitBranch, Layers } from "lucide-react"
+import { Smartphone, Server, Database, Cloud, Code2, Monitor, Globe, Cpu, Gamepad2 } from "lucide-react"
 
 const mobileSkills = [
   { name: "Flutter / Dart", icon: Smartphone },
-  { name: "Android (Kotlin / Java)", icon: Code2 },
-  { name: "iOS (Flutter)", icon: Smartphone },
-  { name: "Firebase", icon: Cloud },
-  { name: "UI/UX Implementation", icon: Palette },
+  { name: "Swift (iOS)", icon: Smartphone },
+  { name: "Kotlin (Android)", icon: Smartphone },
+]
+
+const webSkills = [
+  { name: "Next.js", icon: Globe },
+  { name: "React.js", icon: Code2 },
+  { name: "Angular", icon: Code2 },
 ]
 
 const backendSkills = [
-  { name: "Java Spring Boot", icon: Server },
-  { name: "PHP / Laravel", icon: Code2 },
-  { name: "REST API Design", icon: Layers },
-  { name: "SQL (MySQL/PostgreSQL)", icon: Database },
-  { name: "NoSQL basics", icon: Database },
-  { name: "Docker", icon: Container },
-  { name: "Basic CI/CD", icon: GitBranch },
-  { name: "JWT auth", icon: Shield },
+  { name: "Spring Boot", icon: Server },
+  { name: "Python", icon: Code2 },
+  { name: "REST API Design", icon: Cloud },
+  { name: "SQL Databases", icon: Database },
 ]
+
+const desktopSkills = [
+  { name: "C++", icon: Cpu },
+  { name: "C# (WPF)", icon: Monitor },
+  { name: "Java (JavaFX)", icon: Code2 },
+]
+
+const gameSkills = [{ name: "Godot Engine", icon: Gamepad2 }]
 
 function SkillCard({
   skill,
@@ -67,7 +75,7 @@ export function SkillsSection() {
         <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 text-foreground">Skills</h2>
 
         {isVisible && (
-          <div className="grid md:grid-cols-2 gap-12">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
             {/* Mobile Development */}
             <div className="space-y-6">
               <h3 className="text-xl font-semibold text-foreground flex items-center gap-2">
@@ -81,15 +89,62 @@ export function SkillsSection() {
               </div>
             </div>
 
+            {/* Web Development */}
+            <div className="space-y-6">
+              <h3 className="text-xl font-semibold text-foreground flex items-center gap-2">
+                <Globe className="w-6 h-6 text-primary" />
+                Web Development
+              </h3>
+              <div className="flex flex-wrap gap-3">
+                {webSkills.map((skill, index) => (
+                  <SkillCard key={skill.name} skill={skill} index={index + mobileSkills.length} />
+                ))}
+              </div>
+            </div>
+
             {/* Backend Development */}
             <div className="space-y-6">
               <h3 className="text-xl font-semibold text-foreground flex items-center gap-2">
                 <Server className="w-6 h-6 text-primary" />
-                Back-end Development
+                Backend Development
               </h3>
               <div className="flex flex-wrap gap-3">
                 {backendSkills.map((skill, index) => (
-                  <SkillCard key={skill.name} skill={skill} index={index + mobileSkills.length} />
+                  <SkillCard key={skill.name} skill={skill} index={index + mobileSkills.length + webSkills.length} />
+                ))}
+              </div>
+            </div>
+
+            {/* Desktop Development */}
+            <div className="space-y-6">
+              <h3 className="text-xl font-semibold text-foreground flex items-center gap-2">
+                <Monitor className="w-6 h-6 text-primary" />
+                Desktop Development
+              </h3>
+              <div className="flex flex-wrap gap-3">
+                {desktopSkills.map((skill, index) => (
+                  <SkillCard
+                    key={skill.name}
+                    skill={skill}
+                    index={index + mobileSkills.length + webSkills.length + backendSkills.length}
+                  />
+                ))}
+              </div>
+            </div>
+
+            {/* Game Development */}
+            <div className="space-y-6">
+              <h3 className="text-xl font-semibold text-foreground flex items-center gap-2">
+                <Gamepad2 className="w-6 h-6 text-primary" />
+                Game Development
+              </h3>
+              <div className="flex flex-wrap gap-3">
+                {gameSkills.map((skill, index) => (
+                  <SkillCard
+                    key={skill.name}
+                    skill={skill}
+                    index={index + mobileSkills.length + webSkills.length + backendSkills.length + desktopSkills.length}
+                  />
                 ))}
               </div>
             </div>
